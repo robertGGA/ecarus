@@ -1,0 +1,42 @@
+@use 'src/assets/globalStyles/GlobalStyles.sass' as gs
+
+header
+  width: 100%
+  background-color: white
+  max-height: 80px
+  border-bottom: 1px solid #E5E5E5
+
+  nav
+    a
+      font-size: 14px
+      line-height: 18px
+      margin-left: 24px
+
+    a:first-child
+      margin-left: 0
+
+.header-container
+  @include gs.size-settings
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+
+  button
+    display: flex
+    align-items: center
+    background: none
+
+  button:last-child
+    margin-left: 50px
+
+  .header-container-section
+    display: inherit
+    flex-direction: inherit
+    align-items: inherit
+
+  p
+    margin-left: 6px
+
+.logo
+  margin: 32px 49px 32px 0

@@ -1,0 +1,24 @@
+@use 'src/assets/globalStyles/GlobalStyles.sass' as gs
+
+footer
+  border-top: 1px solid gs.$borders-color
+  position: absolute
+  background-color: white
+  width: 100%
+  bottom: 0
+  z-index: 1
+
+  .footer-container
+    display: flex
+    flex-direction: row
+    @include gs.size-settings
+
+  p
+    @include gs.font-settings-footer-and-header
+    margin-left: 10px
+
+  .footer-content-container
+    display: flex
+    flex-direction: row
+    align-items: center
+    margin: 21px 31px 21px 0

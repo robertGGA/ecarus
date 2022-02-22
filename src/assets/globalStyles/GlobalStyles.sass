@@ -1,0 +1,30 @@
+@mixin font-settings-footer-and-header
+  font-family: Inter
+  font-size: 14px
+  line-height: 18px
+
+@mixin size-settings
+  max-width: 1200px
+  margin: 0 auto
+
+@mixin h2-font-settings
+  font-style: normal
+  font-weight: 600
+  font-size: 32px
+  line-height: 40px
+
+@mixin default-font
+  font-style: normal
+  font-weight: normal
+  font-size: 16px
+  line-height: 24px
+
+p
+  @include default-font
+
+h1
+  font-weight: bold
+  font-size: 48px
+  line-height: 56px
+
+$borders-color: #E5E5E5
