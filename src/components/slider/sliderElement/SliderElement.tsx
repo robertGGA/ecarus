@@ -27,7 +27,6 @@ const SliderElement: FC<SliderElementProps> = ({title, color, info, imgNumber, b
             break;
     }
 
-
     return(
         <div style={{"backgroundColor": `${color}`}} className={'slider-element-container'}>
             <div className={'slider-element-container-wrapper'}>

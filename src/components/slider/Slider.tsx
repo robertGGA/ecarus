@@ -4,14 +4,20 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import 'swiper/css';
 import "swiper/css/navigation";
 import './sliderStyles.sass';
+import {useState} from "react";
 
 const Slider = () => {
+    const [prevEl, setPrevEl] = useState<HTMLElement | null>(null)
+    const [nextEl, setNextEl] = useState<HTMLElement | null>(null)
     return(
+        <>
         <Swiper
-            modules={[Navigation, Pagination]}
-            spaceBetween={100}
-            slidesPerView={1}
-            navigation
+            modules={[ Navigation, Pagination]}
+            spaceBetween={30}
+            navigation={{
+                prevEl,
+                nextEl
+            }}
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}>
             <SwiperSlide>
@@ -24,7 +30,11 @@ const Slider = () => {
                 <SliderElement title={'Что с масками?'} info={'Медицинские маски не обязательно должны становиться отходами. Их тоже можно сдать на переработку.'} color={'#BFF0DE'} btnInfo={'Пункты сбора масок'} imgNumber={3}/>
             </SwiperSlide>
         </Swiper>
+            <div className={'btn-container'}>
+                <div className={'btn-prv'} ref={(node) => setPrevEl(node)}/>
+                <div className={'btn-next'} ref={(node) => setNextEl(node)}/>
+            </div>
+        </>
     );
 }
-
 export default Slider;

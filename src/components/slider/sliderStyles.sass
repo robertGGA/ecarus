@@ -1,12 +1,45 @@
-$svg-1: '<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.53033 13.5303C7.23744 13.8232 6.76256 13.8232 6.46967 13.5303L0.46967 7.53033C0.176777 7.23744 0.176777 6.76256 0.46967 6.46967L6.46967 0.469669C6.76256 0.176776 7.23744 0.176776 7.53033 0.469669C7.82322 0.762563 7.82322 1.23744 7.53033 1.53033L2.06066 7L7.53033 12.4697C7.82322 12.7626 7.82322 13.2374 7.53033 13.5303Z" fill="#000B26" fill-opacity="0.72"/> </svg>'
 
+.btn-container
+  position: relative
+  bottom: 181px
+  margin: 0 auto
+  width: 100%
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  z-index: 2
 
-.swiper-button-next
-  background-image: $svg-1
+.btn-next
+  position: relative
+  left: 22px
+  width: 44px
+  height: 44px
+  overflow: auto
+
+  background-color: white
+  box-shadow: 0px 4px 24px rgba(0, 11, 38, 0.12)
+  border-radius: 50px
+
+  background-image: url("rightSliderArrow.svg")
   background-repeat: no-repeat
-  background-size: 100% auto
   background-position: center
 
+.btn-prv
+  position: relative
+  right: 22px
+  width: 44px
+  height: 44px
+  background: white
+  box-shadow: 0px 4px 24px rgba(0, 11, 38, 0.12)
+  border-radius: 50px
+  background-image: url("leftSliderArrow.svg")
+  background-repeat: no-repeat
+  background-position: center
+
+.swiper-button-prev::after
+  display: none
 
 .swiper-button-next::after
   display: none
+
+

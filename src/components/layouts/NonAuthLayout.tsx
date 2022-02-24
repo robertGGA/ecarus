@@ -10,6 +10,7 @@ const NonAuthLayout = () => {
           <main>
             <Outlet/>
           </main>
+          <Footer/>
       </div>
     );
 }
